@@ -1,4 +1,5 @@
 ﻿using System;
+using Otus.BitArithmetic.ThirdHomework.Logic;
 
 namespace Otus.BitArithmetic.ThirdHomework
 {
@@ -6,7 +7,14 @@ namespace Otus.BitArithmetic.ThirdHomework
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var kingMovements = new KingMovements();
+            Console.WriteLine($"King movements for 15: {kingMovements.GetMoves(15)}");
+            Console.WriteLine($"King movements for 0: {kingMovements.GetMoves(0)}");
+
+            var horseMovements = new HorseMovements();
+            Console.WriteLine($"Horse movements count for 27: {horseMovements.GetMovesCount(27)}");
+
+            Console.ReadKey();
         }
     }
 }
